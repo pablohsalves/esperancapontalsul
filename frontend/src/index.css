@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #0a0a0a; /* Preto profundo */
+  --secondary-bg: #1a1a1a; /* Cinza escuro */
+  --accent: #00d4ff; /* Azul neon */
+  --text-primary: #ffffff; /* Branco */
+  --text-secondary: #a0a0a0; /* Cinza claro */
+}
+
+body {
+  @apply bg-[var(--primary-bg)] text-[var(--text-primary)] font-['Inter'];
+}
+
+input, button {
+  @apply transition-all duration-200;
+}
+
+input {
+  @apply bg-[var(--secondary-bg)] border border-gray-700 rounded-lg p-3 text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)];
+}
+
+button {
+  @apply bg-gradient-to-r from-[var(--accent)] to-blue-700 text-[var(--text-primary)] rounded-lg p-3 hover:bg-opacity-80;
+}
+
+a {
+  @apply text-[var(--accent)] hover:underline;
+}
+
+ul {
+  @apply space-y-2;
+}
+
+li {
+  @apply bg-[var(--secondary-bg)] p-3 rounded-lg flex justify-between items-center;
+}
+
+button:hover {
+  @apply transform scale-105;
+}
+
+input:focus {
+  @apply animate-pulse;
+}
+
+h1 {
+  @apply text-accent;
+}
